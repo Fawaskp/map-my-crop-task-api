@@ -1,0 +1,6 @@
+understood about saving of point geometry in model from docs.djangoproject.com
+had issue with -> Could not find the GDAL library 
+iam first time with geos and map things
+
+references:-
+https://stackoverflow.com/questions/24981784/how-do-i-add-postgis-to-postgresql-pgadmin
