@@ -12,7 +12,7 @@ from .serializers import (
 )
 from django.contrib.gis.geos import Point
 from rest_framework_simplejwt.views import TokenObtainPairView
-from rest_framework.permissions import IsAuthenticated,IsAdminUser
+from rest_framework.permissions import IsAuthenticated,IsAdminUser, AllowAny
 from rest_framework.decorators import api_view, permission_classes
 from rest_framework_simplejwt.tokens import RefreshToken,AccessToken
 from django.contrib.auth import get_user_model
@@ -95,12 +95,21 @@ class POIListView(generics.ListAPIView):
     serializer_class = POISerializer
     queryset = POI.objects.all()
 
+class UserSearchView(generics.ListAPIView):
+    permission_classes = [IsAdminUser]
+    serializer_class = UserListSerializer
+
+    def get_queryset(self):
+        name = self.request.query_params.get('name', '')
+        return get_user_model().objects.filter(username__icontains=name)
+    
+
 
 """User related APIs"""
 
 class UserRegistrationView(generics.CreateAPIView):
     serializer_class = UserRegistrationSerializer
-    permission_classes = []
+    permission_classes = [AllowAny]
     def post(self, request, *args, **kwargs):
         serializer = self.get_serializer(data=request.data)
         serializer.is_valid(raise_exception=True)

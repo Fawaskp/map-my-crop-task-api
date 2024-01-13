@@ -1,4 +1,7 @@
 from django.contrib import admin
 from .models import POI
 
-admin.site.register(POI)
+class POIAdmin(admin.ModelAdmin):
+    list_display = ('name', 'user')
+
+admin.site.register(POI, POIAdmin)
