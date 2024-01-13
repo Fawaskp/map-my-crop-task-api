@@ -1,5 +1,5 @@
 # 🚀 POI Application (API)
-This application designed to manage Places of Interests (POIs) with their respective locations and names. The application provides a REST API for handling user authentication, CRUD operations on POIs, and user management.
+_This application designed to manage Places of Interests (POIs) with their respective locations and names. The application provides a REST API for handling user authentication, CRUD operations on POIs, and user management._
 
 ## Framework Selection
 
