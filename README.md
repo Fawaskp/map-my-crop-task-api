@@ -21,7 +21,8 @@ For this project, the backend is built using Django and Django REST Framework (D
    ```
 
 3.  **Install Geospatial library**
-    - make sure library installed and given path in .env, reference: https://docs.djangoproject.com/en/5.0/ref/contrib/gis/install/geolibs/
+    - make sure library installed and given path in .env,
+    - reference: https://docs.djangoproject.com/en/5.0/ref/contrib/gis/install/geolibs/
 
 4.  **PostGIS Extension:**
     - Set up the PostGIS extension with the database to store point geometry data.
@@ -34,7 +35,7 @@ For this project, the backend is built using Django and Django REST Framework (D
    - Install project dependencies using the provided [`requirements.txt`](requirements.txt) file.
 
 7. **Environment Variables:**
-   - Create a `.env` file based on the provided `.env.example` to configure local environment variables.
+   - Create a `.env` file based on the provided [`.env.example`](.env.example) to configure local environment variables.
 
 8. **Migration:**
    - Make migrations and apply them to set up the database schema.
