@@ -11,23 +11,32 @@ For this project, the backend is built using Django and Django REST Framework (D
    - Make sure you have Python installed on your system. You can download and install Python from the official website: https://www.python.org/
    - Install Postgres on your system. You can download and install Postgres from the official website: https://www.postgresql.org/
 
-2. **Install Geospatial library**
-   - make sure library installed and given path in .env, reference: https://docs.djangoproject.com/en/5.0/ref/contrib/gis/install/geolibs/
+2. **Clone the Repository:**
 
-3.  **PostGIS Extension:**
+   - Open your terminal or command prompt.
+   - Change the current working directory to where you want to store the POI application.
+   - Run the following command to clone the frontend repository:
+   ```bash
+   git clone https://github.com/Fawaskp/map-my-crop-task-api.git
+   ```
+
+3.  **Install Geospatial library**
+    - make sure library installed and given path in .env, reference: https://docs.djangoproject.com/en/5.0/ref/contrib/gis/install/geolibs/
+
+4.  **PostGIS Extension:**
     - Set up the PostGIS extension with the database to store point geometry data.
     - also change db engine to postgis `"ENGINE": "django.contrib.gis.db.backends.postgis",`
 
-4. **Virtual Environment:**
+5. **Virtual Environment:**
    - Create a virtual environment to avoid version collisions.
 
-5. **Dependencies Installation:**
+6. **Dependencies Installation:**
    - Install project dependencies using the provided [`requirements.txt`](requirements.txt) file.
 
-6. **Environment Variables:**
+7. **Environment Variables:**
    - Create a `.env` file based on the provided `.env.example` to configure local environment variables.
 
-7. **Migration:**
+8. **Migration:**
    - Make migrations and apply them to set up the database schema.
      
   
@@ -35,3 +44,5 @@ For this project, the backend is built using Django and Django REST Framework (D
     python manage.py makemigrations
     python manage.py migrate
    ```
+
+   [POI CLIENT Repository](https://github.com/Fawaskp/map-my-crop-task-client)
